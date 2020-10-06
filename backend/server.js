@@ -1,24 +1,36 @@
 const express = require('express');
+const app = express();
 const cors = require('cors');
-const mongoose = require('mongoose')
+const mysql = require('mysql2')
+
+const db = mysql.createPool({
+    host: "localHost",
+    user: "root",
+    password: "lyfe15atst",
+    database: "createReadDataBase"
+})
+
+const port = process.env.PORT || 5000;
 
 require('dotenv').config();
 
-const app = express();
-const port = process.env.PORT || 5000;
+app.listen(port, () => {
+    console.log("running on port 5000")
+})
+
 
 app.use(cors());
 app.use(express.json());
 
-const uri = process.envATLAS_URI;
-mongoose.connect(uri, {useNewUrlParser: true, useCreateIndex: true});
+// app.get('/', (req, res) => {
+//     const sqlInsert = "INSERT INTO professional_Xp (professionalXpName, professionalXpDate, professionalXpDetail) VALUES ('Youth Enrichment League', '9999-12-31 23:59:59', 'I tought kids coding');"
+//     db.query(sqlInsert, (err, result) => {
+//         res.send("Bismillah")
+//     })
+// })
 
-const connection = mongoose.connection;
-
-connection.once('open', () => {
-    console.log("MongoDB database connection established successfully");
-})
-
-app.listen(port, () => {
-    console.log(`Server is running on port: ${port}`);
-});
+// app.post('api/insert-form', (req, res) => {
+//     const sqlInsert = "INSERT INTO contact_form (firstName, lastName, email, company, detailedMessage, contactDate) VALUES (?,?,?,?,?,?)"
+//     db.query(sqlInsert, [firstName, lastName, email, company, detailedMessage, contactDate], (err, result) => {
+//     })
+// })

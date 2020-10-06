@@ -24,8 +24,8 @@ class PortfolioLanding extends Component {
 
     
     render () {
-        let title = 'About Me',
-        description = 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered <a href="#">alteration</a> in some form, by injected humour, or randomised words which dont look even slightly believable. If you are going to use a passage of Lorem Ipsum,';
+        let title = 'A bit about me',
+        description = 'I am a collage dropout that learned how to write JavaScript Web Apps at a BootCamp in three months, worked on a Front End Project for 5 months, and learned NodeJs with MySQL in one month. Hire me please! Thanks';
     const PostList = BlogContent.slice(0 , 3);
 
         return (
@@ -44,11 +44,12 @@ class PortfolioLanding extends Component {
                                     <div className="col-lg-12">
                                         <div className={`inner ${value.textPosition}`}>
                                             {value.category ? <span>{value.category}</span> : ''}
-                                            <h1 className="title">Hi, I’m Jone Doe <br/>
+                                            <h1 className="title">Hi, I’m Falmata Dawano! <br/>
                                             <TextLoop>
-                                                <span> JS Developer.</span>
-                                                <span> UI/UX Designer.</span>
-                                                <span> Content Writter.</span>
+                                                <span> JavaScript Developer</span>
+                                                <span> React UI Developer</span>
+                                                <span> FullStack NodeJs Developer</span>
+                                                <span> Web Designer</span>
                                             </TextLoop>{" "}
                                             </h1>
                                             <h2>based in USA.</h2>
