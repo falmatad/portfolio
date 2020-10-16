@@ -1,16 +1,49 @@
 import React, { Component } from "react";
+import axios from "axios";
+import moment from "moment"
+
 
 class ContactThree extends Component{
     constructor(props){
         super(props);
         this.state = {
-            rnName: '',
-            rnEmail: '',
-            rnSubject: '',
-            rnMessage: '',
+            firstName: '',
+            lastName: '',
+            email: '',
+            company: '',
+            detailedMessage: '',
+            contactDate: moment(new Date().toISOString()).format("YYYY-MM-DD HH:mm:ss")
         };
+        this.handelSubmit = this.handelSubmit.bind(this);
     }
+    
+
+     handelSubmit = (e) => {
+        
+        
+        const {firstName, lastName, email, company, detailedMessage, contactDate} = this.state
+
+        axios.post('http://localhost:5000/api/insert-form',
+        {
+            firstName: firstName,
+            lastName: lastName,
+            email: email,
+            company: company,
+            detailedMessage: detailedMessage,
+            contactDate: contactDate
+        }).then((response) => {
+            alert("Contact Sent")
+            console.log(response)
+        }).catch(function (error) {
+                    console.log(error);
+        });
+        e.preventDefault()
+
+    }
+    
     render(){
+        const date = moment(new Date().toISOString()).format("YYYY-MM-DD HH:mm:ss")
+        console.log( date)
         return(
             <div className="contact-form--1">
                 <div className="container">
@@ -22,15 +55,26 @@ class ContactThree extends Component{
                                     <a href="mailto:admin@example.com"> admin@example.com</a> </p>
                             </div>
                             <div className="form-wrapper">
-                                <form>
+                                <form onSubmit={e => {this.handelSubmit(e)}}>
                                     <label htmlFor="item01">
                                         <input
                                             type="text"
-                                            name="name"
+                                            name="firstName"
                                             id="item01"
-                                            value={this.state.rnName}
-                                            onChange={(e)=>{this.setState({rnName: e.target.value});}}
-                                            placeholder="Your Name *"
+                                            value={this.state.firstName}
+                                            onChange={(e)=>{this.setState({firstName: e.target.value});}}
+                                            placeholder="Your First Name "
+                                        />
+                                    </label>
+
+                                    <label htmlFor="item03">
+                                        <input
+                                            type="text"
+                                            name="lastName"
+                                            id="item02"
+                                            value={this.state.lastName}
+                                            onChange={(e)=>{this.setState({lastName: e.target.value});}}
+                                            placeholder="Last Name(dont worry i dont sell your information...is what they all say)"
                                         />
                                     </label>
 
@@ -38,9 +82,9 @@ class ContactThree extends Component{
                                         <input
                                             type="text"
                                             name="email"
-                                            id="item02"
-                                            value={this.state.rnEmail}
-                                            onChange={(e)=>{this.setState({rnEmail: e.target.value});}}
+                                            id="item03"
+                                            value={this.state.email}
+                                            onChange={(e)=>{this.setState({email: e.target.value});}}
                                             placeholder="Your email *"
                                         />
                                     </label>
@@ -48,21 +92,21 @@ class ContactThree extends Component{
                                     <label htmlFor="item03">
                                         <input
                                             type="text"
-                                            name="subject"
-                                            id="item03"
-                                            value={this.state.rnSubject}
-                                            onChange={(e)=>{this.setState({rnSubject: e.target.value});}}
-                                            placeholder="Write a Subject"
+                                            name="company"
+                                            id="item04"
+                                            value={this.state.company}
+                                            onChange={(e)=>{this.setState({company: e.target.value});}}
+                                            placeholder="Company"
                                         />
                                     </label>
                                     <label htmlFor="item04">
                                         <textarea
                                             type="text"
-                                            id="item04"
-                                            name="message"
-                                            value={this.state.rnMessage}
-                                            onChange={(e)=>{this.setState({rnMessage: e.target.value});}}
-                                            placeholder="Your Message"
+                                            id="item05"
+                                            name="detailedMessage"
+                                            value={this.state.detailedMessage}
+                                            onChange={(e)=>{this.setState({detailedMessage: e.target.value});}}
+                                            placeholder="Your Detailed Message for me goes here.."
                                         />
                                     </label>
                                     <button className="rn-button-style--2 btn-solid" type="submit" value="submit" name="submit" id="mc-embedded-subscribe">Submit</button>

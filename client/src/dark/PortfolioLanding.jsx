@@ -32,7 +32,7 @@ class PortfolioLanding extends Component {
         <div className="active-dark">
             <Helmet pageTitle="Portfolio Landing" />
 
-            <HeaderThree homeLink="/" logo="symbol-dark" color="color-black"/>
+            <HeaderThree homeLink="/" logo="symbol-light" color="color-light"/>
             {/* Start Slider Area   */}
             <div id="home" className="fix">
                 <div className="slider-wrapper">
@@ -43,16 +43,15 @@ class PortfolioLanding extends Component {
                                 <div className="row">
                                     <div className="col-lg-12">
                                         <div className={`inner ${value.textPosition}`}>
-                                            {value.category ? <span>{value.category}</span> : ''}
+                                            
                                             <h1 className="title">Hi, I’m Falmata Dawano! <br/>
                                             <TextLoop>
-                                                <span> JavaScript Developer</span>
-                                                <span> React UI Developer</span>
-                                                <span> FullStack NodeJs Developer</span>
+                                                <span> Frontend Developer</span>
+                                                <span> Backend Developer</span>
                                                 <span> Web Designer</span>
                                             </TextLoop>{" "}
                                             </h1>
-                                            <h2>based in USA.</h2>
+                                            
                                             {value.description ? <p className="description">{value.description}</p> : ''}
                                             {value.buttonText ? <div className="slide-btn"><a className="rn-button-style--2 btn-primary-color" href={`${value.buttonLink}`}>{value.buttonText}</a></div> : ''}
                                         </div>
