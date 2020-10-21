@@ -34,10 +34,22 @@ class ContactThree extends Component{
         }).then((response) => {
             alert("Contact Sent")
             console.log(response)
+
         }).catch(function (error) {
                     console.log(error);
         });
+        
         e.preventDefault()
+
+        this.setState({
+            firstName: '',
+            lastName: '',
+            email: '',
+            company: '',
+            detailedMessage: '',
+            contactDate: moment(new Date().toISOString()).format("YYYY-MM-DD HH:mm:ss")
+        })
+
 
     }
     
@@ -51,11 +63,11 @@ class ContactThree extends Component{
                         <div className="col-lg-6 order-2 order-lg-1">
                             <div className="section-title text-left mb--50">
                                 <h2 className="title">{this.props.contactTitle}</h2>
-                                <p className="description">I am available for freelance work. Connect with me via phone: <a href="tel:+8801923088574">01923 088574</a> or email:
-                                    <a href="mailto:admin@example.com"> admin@example.com</a> </p>
+                                <p className="description">I am available for direct hire, contract, intership, and freelance opportunities. Connect with me via phone: <a href="tel:+1(952)855-2202">(952)855-2202</a> or email:
+                                    <a href="mailto:falmata.dawano@gmail.com"> falmata.dawano@gmail.com</a> </p>
                             </div>
                             <div className="form-wrapper">
-                                <form onSubmit={e => {this.handelSubmit(e)}}>
+                                <form onSubmit={this.handelSubmit}>
                                     <label htmlFor="item01">
                                         <input
                                             type="text"
@@ -63,7 +75,7 @@ class ContactThree extends Component{
                                             id="item01"
                                             value={this.state.firstName}
                                             onChange={(e)=>{this.setState({firstName: e.target.value});}}
-                                            placeholder="Your First Name "
+                                            placeholder="First Name "
                                         />
                                     </label>
 
@@ -74,7 +86,7 @@ class ContactThree extends Component{
                                             id="item02"
                                             value={this.state.lastName}
                                             onChange={(e)=>{this.setState({lastName: e.target.value});}}
-                                            placeholder="Last Name(dont worry i dont sell your information...is what they all say)"
+                                            placeholder="Last Name"
                                         />
                                     </label>
 
@@ -85,7 +97,7 @@ class ContactThree extends Component{
                                             id="item03"
                                             value={this.state.email}
                                             onChange={(e)=>{this.setState({email: e.target.value});}}
-                                            placeholder="Your email *"
+                                            placeholder="Your email"
                                         />
                                     </label>
 
@@ -106,7 +118,7 @@ class ContactThree extends Component{
                                             name="detailedMessage"
                                             value={this.state.detailedMessage}
                                             onChange={(e)=>{this.setState({detailedMessage: e.target.value});}}
-                                            placeholder="Your Detailed Message for me goes here.."
+                                            placeholder="Your Detailed Message for me..."
                                         />
                                     </label>
                                     <button className="rn-button-style--2 btn-solid" type="submit" value="submit" name="submit" id="mc-embedded-subscribe">Submit</button>
