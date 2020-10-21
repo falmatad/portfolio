@@ -3,7 +3,7 @@ import PageHelmet from "../component/common/Helmet";
 import Breadcrumb from "../elements/common/Breadcrumb";
 import ScrollToTop from 'react-scroll-up';
 import { FiChevronUp } from "react-icons/fi";
-import Header from "../component/header/Header";
+import HeaderThree from "../component/header/HeaderThree";
 import Footer from "../component/footer/Footer";
 
 
@@ -13,7 +13,7 @@ const Elements = () => {
             <PageHelmet pageTitle='Counters' />
 
             {/* Start Header Area  */}
-            <Header headertransparent="header--transparent" colorblack="color--black" logoname="logo.png" />
+            <HeaderThree headertransparent="header--transparent" colorblack="color--black" logoname="logo.png" />
             {/* End Header Area  */}
             
             {/* Start Breadcrump Area */}

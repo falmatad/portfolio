@@ -5,9 +5,7 @@ import Scrollspy from 'react-scrollspy'
 
 const SocialShare = [
     {Social: <FaFacebookF /> , link: 'https://www.facebook.com/'},
-    {Social: <FaLinkedinIn /> , link: 'https://www.linkedin.com/'},
-    {Social: <FaInstagram /> , link: 'https://www.instagram.com/'},
-    {Social: <FaTwitter /> , link: 'https://twitter.com/'},
+    {Social: <FaLinkedinIn /> , link: 'https://www.linkedin.com/in/'}
 ]
 class HeaderThree extends Component{
     constructor(props) {
@@ -75,20 +73,11 @@ class HeaderThree extends Component{
                                 {logoUrl}
                             </a>
                         </div>
-                        <nav className="mainmenunav d-lg-block ml--50">
-                            <Scrollspy className="mainmenu" items={['home','about','service','portfolio','blog','contact']} currentClassName="is-current" offset={-200}>
-                                <li><a href="#home">Home</a></li>
-                                <li><a href="#about">About</a></li>
-                                <li><a href="#service">Service</a></li>
-                                <li><a href="#portfolio">Portfolio</a></li>
-                                <li><a href="#blog">Blog</a></li>
-                                <li><a href="#contact">Contact</a></li>
-                            </Scrollspy>
-                        </nav>
+                        
                     </div>
                     <div className="header-right">
                         <div className="social-share-inner">
-                            <ul className="social-share social-style--2 color-black d-flex justify-content-start liststyle">
+                            <ul className="social-share social-style--2 color-white d-flex justify-content-start liststyle">
                                 {SocialShare.map((val , i) => (
                                     <li key={i}><a href={`${val.link}`}>{val.Social}</a></li>
                                 ))}
@@ -96,7 +85,7 @@ class HeaderThree extends Component{
                         </div>
                         <div className="header-btn">
                             <a className="rn-btn" href="https://themeforest.net/checkout/from_item/25457315?license=regular">
-                                <span>buy now</span>
+                                <span>Download CV</span>
                             </a>
                         </div>
                         {/* Start Humberger Menu  */}
