@@ -37,17 +37,18 @@ app.use(express.urlencoded({extended: true}));
 //     })
 // })
 
-// app.get('api/insert-professional-xp', (req, res) => {
+app.get('/api/get', (req, res) => {
 
-//     const professionalXpName = req.body.data.professionalXpName;
-//     const professionalXpDate = req.body.data.professionalXpDate;
-//     const professionalXpDetail = req.body.data.professionalXpDetail;
+    // const professionalXpName = req.body.data.professionalXpName;
+    // const professionalXpDate = req.body.data.professionalXpDate;
+    // const professionalXpDetail = req.body.data.professionalXpDetail;
 
-//     const sqlInsert = "INSERT INTO professional_Xp (professionalXpName, professionalXpDate, professionalXpDetail) VALUES ('test','test','test);"
-//     db.query(sqlInsert, [professionalXpName, professionalXpDate, professionalXpDetail], (err, result) => {
-//         console.log(result)
-//     })
-// })
+    const sqlInsert = "SELECT * FROM contact_form";
+
+    db.query(sqlInsert, (err, result) => {
+        res.send(result)
+    })
+})
 
 // and all other crud operations if needed 
 
