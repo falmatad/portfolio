@@ -4,21 +4,21 @@
 .portfolio {
     position: relative;
     @extend %transition;
-    min-height: 600px;
+    min-height: 500px;
     width: 100%;
-    padding-top: 35%;
+    padding-top: 15%;
     
     @media #{$laptop-device} {
-        min-height: 500px;
+        min-height: 400px;
     }
     @media #{$lg-layout} {
-        min-height: 500px;
+        min-height: 400px;
     }
     @media #{$md-layout} {
-        min-height: 450px;
+        min-height: 350px;
     }
     @media #{$sm-layout} {
-        min-height: 400px;
+        min-height: 300px;
     }
     .thumbnail-inner{
         transition: transform .28s ease;
@@ -52,7 +52,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        height: 100%;
+        height: 85%;
         width: 100%;
         background-size: cover;
         background-position: center;

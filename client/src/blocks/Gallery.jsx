@@ -110,54 +110,7 @@ class Gallery extends Component {
             <main className="page-wrapper">
 
                 {/* Start Portfolio Area  */}
-                <div className="rn-portfolio-area ptb--120 bg_color--1 line-separator">
-                    <div className="container">
-                        <div className="row">
-                            {TabOne.map((value , index) => (
-                                <div className="col-lg-6" key={index}>
-                                    {isOpen && (
-                                        <Lightbox
-                                            mainSrc={TabOne[tab1].bigImage}
-                                            nextSrc={TabOne[(tab1 + 1) % TabOne.length]}
-                                            prevSrc={TabOne[(tab1 + TabOne.length - 1) % TabOne.length]}
-                                            onCloseRequest={() => this.setState({ isOpen: false })}
-                                            onMovePrevRequest={() =>
-                                            this.setState({
-                                                tab1: (tab1 + TabOne.length - 1) % TabOne.length,
-                                            })
-                                            }
-                                            onMoveNextRequest={() =>
-                                                this.setState({
-                                                    tab1: (tab1 + 1) % TabOne.length,
-                                                })
-                                            }
-                                        />
-                                    )}
-                                    <div className="item-portfolio-static">
-                                        <div onClick={() => this.setState({ isOpen: true, tab1: index })}>
-                                            <div className="portfolio-static">
-                                                <div className="thumbnail-inner">
-                                                    <div className="thumbnail">
-                                                        <a href="#portfolio-details">
-                                                            <img src={`/assets/images/portfolio/dp-portfolio-${value.image}.jpg`} alt="Portfolio Images"/>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div className="content">
-                                                    <div className="inner">
-                                                        <p>{value.category}</p>
-                                                        <h4><a href="#portfolio-details">{value.title}</a></h4>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-                {/* End Portfolio Area  */}
+                
 
                 {/* Start Portfolio Area  */}
                 <div className="creative-portfolio-wrapper ptb--120 bg_color--1">

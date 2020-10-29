@@ -3,16 +3,12 @@ import ScrollToTop from 'react-scroll-up';
 import { FiChevronUp } from "react-icons/fi";
 import Helmet from "../component/common/Helmet";
 import TextLoop from "react-text-loop";
-import HeaderThree from "../component/header/HeaderThree";
-import FooterTwo from "../component/footer/FooterTwo";
 import TabTwo from "../elements/tab/TabTwo";
 import ContactThree from "../elements/contact/ContactThree";
-// import PortfolioList from "../elements/portfolio/PortfolioList";
-import ServiceList from "../elements/service/ServiceList";
 import BlogContent from "../elements/blog/BlogContent";
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
-import {FaTwitter ,FaInstagram ,FaFacebookF , FaLinkedinIn } from "react-icons/fa";
+import {FaFacebookF , FaLinkedinIn } from "react-icons/fa";
 
 const SocialShare = [
     {Social: <FaFacebookF /> , link: 'https://www.facebook.com/'},
@@ -66,23 +62,26 @@ const PortfolioList = [
 const TabOne = [
     
     {
-        image: '01',
+        image: '04',
         bigImage: '/assets/images/portfolio/big/dp-big--portfolio-04.jpg',
         category: 'Frontend Developer',
-        title: 'Daryeel Health'
-    },
-    {
-        image: '02',
-        bigImage: '/assets/images/portfolio/big/dp-big--portfolio-01.jpg',
-        category: 'Web Designer',
-        title: 'Essentialisim - Landing Page'
+        title: 'Daryeel Health',
+        link:'https://app-dev.daryeelhealth.com/'
     },
     {
         image: '03',
         bigImage: '/assets/images/portfolio/big/dp-big--portfolio-03.jpg',
         category: 'Frontend Developer ',
-        title: 'A Better Proffesor App'
+        title: 'A Better Proffesor App',
+        link:'https://buildweek-better-professor.netlify.app/'
     },
+    {
+        image: '01',
+        bigImage: '/assets/images/portfolio/big/dp-big--portfolio-01.jpg',
+        category: 'Web Designer',
+        title: 'Essentialisim - Landing Page',
+        link:'https://essentialismlanding.netlify.app/'
+    }
 ]
 
 class PortfolioLanding extends Component {
@@ -96,7 +95,7 @@ class PortfolioLanding extends Component {
     
     render () {
         let title = 'A bit about me',
-        description = 'I am a collage dropout that learned how to write JavaScript Web Apps at a BootCamp in three months, worked on a Front End Project for 5 months, and learned NodeJs with MySQL in one month. Hire me please! Thanks';
+        description = "People know me mostly based on what I'v been doing in the last 5 years or so. Well I almost failed High School because I only cared about technology based electives (EPHS had it all..), quit and returned to collage 4 times, made a living by designing cms based websites, and finally became a Fullstack Web Developer. I'll tell you the details if you Shoot me a hello message in the form below which will go to a MySQL server on AWS ;)";
         const PostList = BlogContent.slice(0 , 3);
 
         const { tab1, isOpen } = this.state;
@@ -124,16 +123,16 @@ class PortfolioLanding extends Component {
                         </div> */}
                     {/* Start Single Slide */}
                     {SlideList.map((value , index) => (
-                        <div className="slide personal-portfolio-slider slider-paralax slider-style-3 d-flex align-items-center justify-content-center bg_image bg_image--25 " key={index}>
+                        <div className="slide personal-portfolio-slider slider-paralax slider-style-3 d-flex align-items-center justify-content-center bg_image bg_image--25" key={index}>
                             <div className="container">
                                 <div className="row">
                                     <div className="col-lg-12">
                                         <div className={`inner ${value.textPosition}`}>
                                             
-                                            <h1 className="title">Hi, I’m Falmata Dawano! <br/>
-                                            <TextLoop>
+                                            <h1 className="title">I’m Falmata Dawano, <br/>
+                                            <TextLoop interval={1800}>
                                                 <span> Frontend Developer</span>
-                                                <span> Backend Developer</span>
+                                                <span> Fullstack Developer</span>
                                                 <span> Web Designer</span>
                                             </TextLoop>{" "}
                                             </h1>
@@ -189,8 +188,7 @@ class PortfolioLanding extends Component {
                         <div className="row align-items-end">
                             <div className="col-lg-12 col-md-12 col-sm-12 col-12">
                                 <div className="section-title text-center">
-                                    <h2>Projects Based on Skills</h2>
-                                    <p>There are many variations of passages of Lorem Ipsum available, <br />but the majority have suffered alteration.</p>
+                                    <h2>My skills in action</h2>
                                 </div>
                             </div>
                         </div>
@@ -198,6 +196,7 @@ class PortfolioLanding extends Component {
                             {TabOne.map((value , index) => (
                                 <div className="col-lg-6" key={index}>
                                     {isOpen && (
+
                                         <Lightbox
                                             mainSrc={TabOne[tab1].bigImage}
                                             nextSrc={TabOne[(tab1 + 1) % TabOne.length]}
@@ -213,6 +212,7 @@ class PortfolioLanding extends Component {
                                                     tab1: (tab1 + 1) % TabOne.length,
                                                 })
                                             }
+                                            toolbarButtons={[<a href={`${TabOne[tab1].link}`}> Link</a>]}
                                         />
                                     )}
                                     <div className="item-portfolio-static">
@@ -221,7 +221,7 @@ class PortfolioLanding extends Component {
                                                 <div className="thumbnail-inner">
                                                     <div className="thumbnail">
                                                         <a href="#portfolio-details">
-                                                            <img src={`/assets/images/portfolio/dp-portfolio-${value.image}.jpg`} alt="Portfolio Images"/>
+                                                            <img src={`/assets/images/portfolio/big/dp-big--portfolio-${value.image}.jpg`} alt="Portfolio Images"/>
                                                         </a>
                                                     </div>
                                                 </div>
