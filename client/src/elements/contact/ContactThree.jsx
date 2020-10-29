@@ -12,14 +12,13 @@ class ContactThree extends Component{
             email: '',
             company: '',
             detailedMessage: '',
-            contactDate: moment(new Date().toISOString()).format("YYYY-MM-DD HH:mm:ss")
+            contactDate: moment(new Date().toISOString()).format("YYYY-MM-DD HH:mm:ss"),
+            alert: ''
         };
         this.handelSubmit = this.handelSubmit.bind(this);
     }
-    
 
-     handelSubmit = (e) => {
-        
+     handelSubmit(e) {
         
         const {firstName, lastName, email, company, detailedMessage, contactDate} = this.state
 
@@ -32,11 +31,15 @@ class ContactThree extends Component{
             detailedMessage: detailedMessage,
             contactDate: contactDate
         }).then((response) => {
-            alert("Contact Sent")
-            console.log(response)
-
+            if (response) {
+                this.setState({alert: "Thanks, your info was sent to me, on a secure AWS MySQL database :)"})
+            }
         }).catch(function (error) {
-                    console.log(error);
+                    if (error) {
+                        this.setState({
+                            alert: "The form wasn't sent, please refresh and try again :)"
+                        })
+                    }
         });
         
         e.preventDefault()
@@ -50,12 +53,10 @@ class ContactThree extends Component{
             contactDate: moment(new Date().toISOString()).format("YYYY-MM-DD HH:mm:ss")
         })
 
-
     }
     
     render(){
-        const date = moment(new Date().toISOString()).format("YYYY-MM-DD HH:mm:ss")
-        console.log( date)
+        
         return(
             <div className="contact-form--1">
                 <div className="container">
@@ -63,11 +64,14 @@ class ContactThree extends Component{
                         <div className="col-lg-6 order-2 order-lg-1">
                             <div className="section-title text-left mb--50">
                                 <h2 className="title">{this.props.contactTitle}</h2>
-                                <p className="description">I am available for direct hire, contract, intership, and freelance opportunities. Connect with me via phone: <a href="tel:+1(952)855-2202">(952)855-2202</a> or email:
-                                    <a href="mailto:falmata.dawano@gmail.com"> falmata.dawano@gmail.com</a> </p>
+                                <p className="description">I am available for direct hire, contract, intership, and freelance opportunities. Reach out to me by phone: <a href="tel:+1(952)855-2202">(952)855-2202</a>, email:
+                                    <a href="mailto:falmata.dawano@gmail.com"> falmata.dawano@gmail.com</a>, or the form below.</p>
                             </div>
                             <div className="form-wrapper">
                                 <form onSubmit={this.handelSubmit}>
+                                { this.state.alert === '' ?
+                                    <>
+                                    
                                     <label htmlFor="item01">
                                         <input
                                             type="text"
@@ -121,7 +125,10 @@ class ContactThree extends Component{
                                             placeholder="Your Detailed Message for me..."
                                         />
                                     </label>
-                                    <button className="rn-button-style--2 btn-solid" type="submit" value="submit" name="submit" id="mc-embedded-subscribe">Submit</button>
+                                    </>
+                                    : null}
+                                    <div className="section-title text-left mb--50">{ this.state.alert !== ''? <p style={{color:'green', margin: '5px'}}>{this.state.alert}</p>: null}</div>
+                                    { this.state.alert === '' ? <button className="rn-button-style--2 btn-solid" type="submit" value="submit" name="submit" id="mc-embedded-subscribe">Send</button>: null}
                                 </form>
                             </div>
                         </div>

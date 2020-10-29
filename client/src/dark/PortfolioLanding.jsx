@@ -124,16 +124,16 @@ class PortfolioLanding extends Component {
                         </div> */}
                     {/* Start Single Slide */}
                     {SlideList.map((value , index) => (
-                        <div className="slide personal-portfolio-slider slider-paralax slider-style-3 d-flex align-items-center justify-content-center bg_image bg_image--25 " key={index}>
+                        <div className="slide personal-portfolio-slider slider-paralax slider-style-3 d-flex align-items-center justify-content-center bg_image bg_image--25" key={index}>
                             <div className="container">
                                 <div className="row">
                                     <div className="col-lg-12">
                                         <div className={`inner ${value.textPosition}`}>
                                             
-                                            <h1 className="title">Hi, I’m Falmata Dawano! <br/>
+                                            <h1 className="title">I’m Falmata Dawano, <br/>
                                             <TextLoop>
                                                 <span> Frontend Developer</span>
-                                                <span> Backend Developer</span>
+                                                <span> Fullstack Developer</span>
                                                 <span> Web Designer</span>
                                             </TextLoop>{" "}
                                             </h1>
@@ -189,8 +189,7 @@ class PortfolioLanding extends Component {
                         <div className="row align-items-end">
                             <div className="col-lg-12 col-md-12 col-sm-12 col-12">
                                 <div className="section-title text-center">
-                                    <h2>Projects Based on Skills</h2>
-                                    <p>There are many variations of passages of Lorem Ipsum available, <br />but the majority have suffered alteration.</p>
+                                    <h2>My skills in action</h2>
                                 </div>
                             </div>
                         </div>
