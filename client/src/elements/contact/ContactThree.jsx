@@ -64,7 +64,7 @@ class ContactThree extends Component{
                         <div className="col-lg-6 order-2 order-lg-1">
                             <div className="section-title text-left mb--50">
                                 <h2 className="title">{this.props.contactTitle}</h2>
-                                <p className="description">I am available for direct hire, contract, intership, and freelance opportunities. Reach out to me by phone: <a href="tel:+1(952)855-2202">(952)855-2202</a>, email:
+                                <p className="description">I am available for direct hire, contract, intership, and freelance roles. Reach out to me by phone: <a href="tel:+1(952)855-2202">(952)855-2202</a>, email:
                                     <a href="mailto:falmata.dawano@gmail.com"> falmata.dawano@gmail.com</a>, or the form below.</p>
                             </div>
                             <div className="form-wrapper">
