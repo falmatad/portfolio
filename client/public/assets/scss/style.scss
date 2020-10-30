@@ -1,9 +1,3 @@
-/*********************************************************************************
-
-	Template Name: Trydo React Degital Agency Template
-	Note: This is style css.
-
-**********************************************************************************/
 
 /**************************************************************
 	
@@ -105,12 +99,9 @@
 ***************************************/
 
 @import 'elements/portfolio';
-@import 'elements/service';
 @import 'elements/slider';
 @import 'elements/counterup';
 @import 'elements/testimonial';
-@import 'elements/brand';
-@import 'elements/team';
 @import 'elements/callto-action';
 @import 'elements/tab';
 @import 'elements/accordion';
@@ -119,7 +110,6 @@
 @import 'elements/progress';
 @import 'elements/column';
 @import 'elements/404';
-@import 'elements/pricing';
 
 
 
@@ -133,11 +123,11 @@
 
 
 /**************************************
-    Template Styles
+    Components Styles
 ***************************************/
 
-@import 'template/about';
-@import 'template/portfolio-details';
-@import 'template/service-details';
-@import 'template/dark-version';
-@import 'template/preview';
+@import 'components/about';
+@import 'components/portfolio-details';
+@import 'components/service-details';
+@import 'components/dark-version';
+@import 'components/preview';

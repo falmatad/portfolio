@@ -4,10 +4,10 @@ const cors = require('cors');
 const mysql = require('mysql2');
 
 const db = mysql.createPool({
-    host: "localhost",
-    user: "root",
-    password: "lyfe15atst",
-    database: "createReadDataBase"
+    host: "us-cdbr-east-02.cleardb.com",
+    user: "bd7768d53cf021",
+    password: "96d5b738",
+    database: "heroku_f4572b416ed836a"
 })
 
 const port = process.env.PORT || 5000;
@@ -61,9 +61,11 @@ app.post('/api/insert-form', (req, res) => {
     const contactDate = req.body.contactDate;
 
     const sqlInsert = "INSERT INTO contact_form (firstName, lastName, email, company, detailedMessage, contactDate) VALUES (?,?,?,?,?,?)"
-    db.query(sqlInsert, [firstName, lastName, email, company, detailedMessage, contactDate], (err, result) => {
-        console.log(err)
+    db.query(sqlInsert, [firstName, lastName, email, company, detailedMessage, contactDate], (err, results) => {
+        if(err){
+            console.log(err);
+          } else {
+            return res.status(200).json({"status": 200,"err": null,"response": results});
+          }
     })
-
-    console.log(res)
 })

@@ -32,7 +32,7 @@ class ContactThree extends Component{
             contactDate: contactDate
         }).then((response) => {
             if (response) {
-                this.setState({alert: "Thanks, your info was sent to me, on a secure AWS MySQL database :)"})
+                this.setState({alert: "Thanks, your info was sent to me, on a secure Heroku MySQL database :)"})
             }
         }).catch(function (error) {
                     if (error) {
