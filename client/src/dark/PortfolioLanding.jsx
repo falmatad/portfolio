@@ -95,7 +95,7 @@ class PortfolioLanding extends Component {
     
     render () {
         let title = 'A bit about me',
-        description = "After leaving collage right after High School for good, I began to design cms based websites for small businesses. Three years laters, I'm a Fullstack Web Developer. I'll tell you the details if you shoot me a message in the form below which will go to a MySQL server on AWS ;)";
+        description = "After leaving collage right after High School for good, I began to design cms based websites for small businesses. Three years laters, I'm a Fullstack Web Developer. I'll tell you the details if you shoot me a message in the form below which will go to a MySQL server on Heroku...";
         const PostList = BlogContent.slice(0 , 3);
 
         const { tab1, isOpen } = this.state;
