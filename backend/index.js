@@ -61,9 +61,11 @@ app.post('/api/insert-form', (req, res) => {
     const contactDate = req.body.contactDate;
 
     const sqlInsert = "INSERT INTO contact_form (firstName, lastName, email, company, detailedMessage, contactDate) VALUES (?,?,?,?,?,?)"
-    db.query(sqlInsert, [firstName, lastName, email, company, detailedMessage, contactDate], (err, result) => {
-        console.log(err)
+    db.query(sqlInsert, [firstName, lastName, email, company, detailedMessage, contactDate], (err, results) => {
+        if(err){
+            console.log(err);
+          } else {
+            return res.status(200).json({"status": 200,"err": null,"response": results});
+          }
     })
-
-    console.log(res)
 })
