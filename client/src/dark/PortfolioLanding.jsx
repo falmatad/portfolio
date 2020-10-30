@@ -95,7 +95,7 @@ class PortfolioLanding extends Component {
     
     render () {
         let title = 'A bit about me',
-        description = "People know me mostly based on what I'v been doing in the last 5 years or so. Well I almost failed High School because I only cared about technology based electives (EPHS had it all..), quit and returned to collage 4 times, made a living by designing cms based websites, and finally became a Fullstack Web Developer. I'll tell you the details if you Shoot me a hello message in the form below which will go to a MySQL server on AWS ;)";
+        description = "After leaving collage right after High School for good, I began to design cms based websites for small businesses. Three years laters, I'm a Fullstack Web Developer. I'll tell you the details if you shoot me a message in the form below which will go to a MySQL server on AWS ;)";
         const PostList = BlogContent.slice(0 , 3);
 
         const { tab1, isOpen } = this.state;
@@ -104,24 +104,10 @@ class PortfolioLanding extends Component {
         <div className={"active-light"}>
             <Helmet pageTitle="Portfolio Landing" />
 
-            {/* <HeaderThree homeLink="/" logo="symbol-light" color="color-dark"/> */}
-            {/* Start Slider Area   */}
             <div id="home" className="fix">
                         
                 <div className="slider-wrapper">
-                    {/* <div className="social-share-inner">
-                            <ul className="social-share social-style--2 color-white d-flex justify-content-start liststyle">
-                                {SocialShare.map((val , i) => (
-                                    <li key={i}><a href={`${val.link}`}>{val.Social}</a></li>
-                                ))}
-                            </ul>
-                        </div>
-                        <div className="header-btn">
-                            <a className="rn-btn" href="https://themeforest.net/checkout/from_item/25457315?license=regular">
-                                <span>Download CV</span>
-                            </a>
-                        </div> */}
-                    {/* Start Single Slide */}
+                    
                     {SlideList.map((value , index) => (
                         <div className="slide personal-portfolio-slider slider-paralax slider-style-3 d-flex align-items-center justify-content-center bg_image bg_image--25" key={index}>
                             <div className="container">
@@ -212,7 +198,7 @@ class PortfolioLanding extends Component {
                                                     tab1: (tab1 + 1) % TabOne.length,
                                                 })
                                             }
-                                            toolbarButtons={[<a href={`${TabOne[tab1].link}`}> Link</a>]}
+                                            toolbarButtons={[<a href={`${TabOne[tab1].link}`} style={{marginTop:'7px', marginRight:'5px', textAlign: 'center', padding: '5px', display: 'revert' }} className="rn-button-style--2 btn-solid" id="mc-embedded-subscribe">Visit</a>]}
                                         />
                                     )}
                                     <div className="item-portfolio-static">
