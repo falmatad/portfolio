@@ -41,6 +41,7 @@ class TabsTwo extends Component{
                                                 </li>
                                             </ul>
                                         </div>
+                                        <codersrank-widget style={{"--header-bg-color": "rgb(152 154 165)"}} username="falmatad"></codersrank-widget>
                                     </TabPanel>
 
                                     <TabPanel>

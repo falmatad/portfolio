@@ -103,7 +103,6 @@ class PortfolioLanding extends Component {
         return (
         <div className={"active-light"}>
             <Helmet pageTitle="Portfolio Landing" />
-
             <div id="home" className="fix">
                         
                 <div className="slider-wrapper">
@@ -122,7 +121,6 @@ class PortfolioLanding extends Component {
                                                 <span> Web Designer</span>
                                             </TextLoop>{" "}
                                             </h1>
-                                            
                                             {value.description ? <p className="description">{value.description}</p> : ''}
                                             {value.buttonText ? <div className="slide-btn"><a className="rn-button-style--2 btn-primary-color" href={`${value.buttonLink}`}>{value.buttonText}</a></div> : ''}
                                         </div>
