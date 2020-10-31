@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node index.js",
     "devStart": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publishToHeroku": "cd ../ && git subtree push --prefix backend heroku-portfolio-backend master || true"
   },
   "keywords": [],
   "author": "",

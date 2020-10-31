@@ -90,7 +90,8 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "test": "node scripts/test.js",
+    "publishToHeroku": "cd ../ && git subtree push --prefix client heroku-portfolio-frontend master || true"
   },
   "eslintConfig": {
     "extends": "react-app"
