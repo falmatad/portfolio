@@ -8,10 +8,9 @@ import ContactThree from "../elements/contact/ContactThree";
 import BlogContent from "../elements/blog/BlogContent";
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
-import {FaFacebookF , FaLinkedinIn } from "react-icons/fa";
+import {FaLinkedinIn } from "react-icons/fa";
 
 const SocialShare = [
-    {Social: <FaFacebookF /> , link: 'https://www.facebook.com/'},
     {Social: <FaLinkedinIn /> , link: 'https://www.linkedin.com/in/'}
 ]
 
@@ -24,40 +23,6 @@ const SlideList = [
         buttonLink: ''
     }
 ]
-
-const PortfolioList = [
-    {
-        images: '7',
-        category: 'Freelancer',
-        title: 'The Language of Developer'
-    },
-    {
-        images: '1',
-        category: 'Freelancer',
-        title: 'The new Thinking for Design'
-    },
-    {
-        images: '2',
-        category: 'Freelancer',
-        title: 'The new Thinking for Design'
-    },
-    {
-        images: '3',
-        category: 'Freelancer',
-        title: 'Getting tickets to the big show'
-    },
-    {
-        images: '8',
-        category: 'Freelancer',
-        title: 'You can see your Portfolio'
-    },
-    {
-        images: '9',
-        category: 'Freelancer',
-        title: 'Getting tickets to the big show'
-    },
-]
-
 
 const TabOne = [
     
