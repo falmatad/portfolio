@@ -27,17 +27,22 @@ class TabsTwo extends Component{
                                             <ul>
                                                 <li>
                                                     <a href="/service">User Interface Development</a>
-                                                    Build reusable User Interfaces that scale with the overall application 
+                                                    Build reusable User Interfaces that scale with the overall application using tech-stack such as Vanilla JavaScript, React, Redux, Responsive Styled Components, and more
                                                 </li>
 
                                                 <li>
-                                                    <a href="/service"> NodeJs Backend Development</a>
-                                                    Build a MySQL server and expose Nodejs API using ExpressJs 
+                                                    <a href="/service"> NodeJs Backend With ExpressJs</a>
+                                                    Expose Nodejs APIs using ExpressJs with proper async response and error handling 
                                                 </li>
 
                                                 <li>
-                                                    <a href="/service"> Responsive Web Design Development</a>
-                                                    Build responsive sites that delight each mouse click and hover
+                                                    <a href="/service"> Responsive Web Design</a>
+                                                    Build responsive sites that delight each mouse click and hover. I use vanilla CSS, CSS within JavaScript, and CSS Preprocessors like Less
+                                                </li>
+
+                                                <li>
+                                                    <a href="/service"> MySQL Relational Database</a>
+                                                    Build and Host MySQL database on the Cloud
                                                 </li>
                                             </ul>
                                         </div>
@@ -48,7 +53,13 @@ class TabsTwo extends Component{
                                        <div className="single-tab-content">
                                            <ul>
                                                <li>
-                                                   <a href="/service"> Software Engineer <span> - Zefa Consulting Inc</span></a> 03/15/2020 - Current
+                                                   <a href="/service"> Software Engineer <span> - Zefa Consulting Inc</span></a> 03/2020 - Current
+                                               </li>
+                                               <li>
+                                                   <a href="/service"> Self Employed Coding Instructor <span> EveryoneShouldCode LLC</span></a> 06/2019 - Current
+                                               </li>
+                                               <li>
+                                                   <a href="/service"> Public School Coding Instructor <span> - Youth Enrichment League</span></a> 10/2018 - Current
                                                </li>
                                            </ul>
                                        </div>

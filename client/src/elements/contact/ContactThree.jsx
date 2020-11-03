@@ -22,7 +22,7 @@ class ContactThree extends Component{
         
         const {firstName, lastName, email, company, detailedMessage, contactDate} = this.state
 
-        axios.post('http://localhost:5000/api/insert-form',
+        axios.post('https://portfolio-node-backend-app.herokuapp.com/api/insert-form',
         {
             firstName: firstName,
             lastName: lastName,
@@ -32,6 +32,14 @@ class ContactThree extends Component{
             contactDate: contactDate
         }).then((response) => {
             if (response) {
+                this.setState({
+                    firstName: '',
+                    lastName: '',
+                    email: '',
+                    company: '',
+                    detailedMessage: '',
+                    contactDate: moment(new Date().toISOString()).format("YYYY-MM-DD HH:mm:ss")
+                })
                 this.setState({alert: "Thanks, your info was sent to me, on a secure Heroku MySQL database :)"})
             }
         }).catch(function (error) {
@@ -44,14 +52,6 @@ class ContactThree extends Component{
         
         e.preventDefault()
 
-        this.setState({
-            firstName: '',
-            lastName: '',
-            email: '',
-            company: '',
-            detailedMessage: '',
-            contactDate: moment(new Date().toISOString()).format("YYYY-MM-DD HH:mm:ss")
-        })
 
     }
     
