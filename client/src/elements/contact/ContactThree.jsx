@@ -22,7 +22,7 @@ class ContactThree extends Component{
         
         const {firstName, lastName, email, company, detailedMessage, contactDate} = this.state
 
-        axios.post('http://localhost:5000/api/insert-form',
+        axios.post('https://portfolio-node-backend-app.herokuapp.com/api/insert-form',
         {
             firstName: firstName,
             lastName: lastName,
