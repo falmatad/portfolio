@@ -13,7 +13,7 @@ import ServiceDetails from "./elements/ServiceDetails";
 import PortfolioDetails from "./elements/PortfolioDetails";
 
 import error404 from "./elements/error404";
-
+import HttpsRedirect from 'react-https-redirect'
 
 import { BrowserRouter, Switch, Route  } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
@@ -22,6 +22,7 @@ import * as serviceWorker from './serviceWorker';
 class Root extends Component{
     render(){
         return(
+            <HttpsRedirect>
             <BrowserRouter basename={'/'}>
                 <Switch>
                     <Route exact path={`${process.env.PUBLIC_URL}/`} component={DarkPortfolioLanding}/>
@@ -35,6 +36,7 @@ class Root extends Component{
 
                 </Switch>
             </BrowserRouter>
+            </HttpsRedirect>
         )
     }
 }
