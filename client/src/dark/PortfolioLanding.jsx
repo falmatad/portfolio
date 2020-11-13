@@ -9,7 +9,6 @@ import BlogContent from "../elements/blog/BlogContent";
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 import {FaLinkedinIn } from "react-icons/fa";
-
 const SocialShare = [
     {Social: <FaLinkedinIn /> , link: 'https://www.linkedin.com/in/'}
 ]
@@ -46,6 +45,13 @@ const TabOne = [
         category: 'Web Designer',
         title: 'Essentialisim - Landing Page',
         link:'https://essentialismlanding.netlify.app/'
+    },
+    {
+        image: '02',
+        bigImage: '/assets/images/portfolio/big/dp-big--portfolio-02.jpg',
+        category: 'Front End Developer',
+        title: 'Github User search',
+        link:'https://github-user-info-search.netlify.app/'
     }
 ]
 
@@ -60,7 +66,7 @@ class PortfolioLanding extends Component {
     
     render () {
         let title = 'A bit about me',
-        description = "After leaving collage right after High School for good, I began to design cms based websites for small businesses. Three years laters, I'm a Fullstack Web Developer. I'll tell you the details if you shoot me a message in the form below which will go to a MySQL server on Heroku...";
+        description = "By leaving collage right after High School for good, I began to design cms based websites for small businesses. Three years laters, I'm a Web Developer with strong knowledge in modern web browser technologies and frameworks. Learn more about me by downloading my CV, checking out my projects, and shooting me a message in the form below. It will go to a which will go to a MySQL Database hosted in the cloud :) ";
         const PostList = BlogContent.slice(0 , 3);
 
         const { tab1, isOpen } = this.state;
@@ -86,6 +92,7 @@ class PortfolioLanding extends Component {
                                                 <span> Web Designer</span>
                                             </TextLoop>{" "}
                                             </h1>
+                                            
                                             {value.description ? <p className="description">{value.description}</p> : ''}
                                             {value.buttonText ? <div className="slide-btn"><a className="rn-button-style--2 btn-primary-color" href={`${value.buttonLink}`}>{value.buttonText}</a></div> : ''}
                                         </div>
@@ -119,6 +126,12 @@ class PortfolioLanding extends Component {
                                         <div className="row mt--30">
                                             <TabTwo tabStyle="tab-style--1" />
                                         </div>
+                                        
+                                    </div>
+                                    <div style={{marginTop:'20px'}}>
+                                        <a className="rn-btn" href="/assets/pdf/MyResumeFalmataDawano.pdf" download='falmata-dawano-resume'>
+                                            <span>Download My CV</span>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -137,7 +150,7 @@ class PortfolioLanding extends Component {
                         <div className="row align-items-end">
                             <div className="col-lg-12 col-md-12 col-sm-12 col-12">
                                 <div className="section-title text-center">
-                                    <h2>My skills in action</h2>
+                                    <h2>Portfolio</h2>
                                 </div>
                             </div>
                         </div>
