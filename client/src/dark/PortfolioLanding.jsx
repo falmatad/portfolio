@@ -5,7 +5,6 @@ import Helmet from "../component/common/Helmet";
 import TextLoop from "react-text-loop";
 import TabTwo from "../elements/tab/TabTwo";
 import ContactThree from "../elements/contact/ContactThree";
-import BlogContent from "../elements/blog/BlogContent";
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 import {FaLinkedinIn } from "react-icons/fa";
@@ -30,28 +29,36 @@ const TabOne = [
         bigImage: '/assets/images/portfolio/big/dp-big--portfolio-04.jpg',
         category: 'Frontend Developer',
         title: 'Daryeel Health',
-        link:'https://app-dev.daryeelhealth.com/'
+        link:'https://app-dev.daryeelhealth.com/',
+        detail: 'React, Redux, SCSS, Express, NodeJs, JavaScript, HTML, CSS, React Native',
+        code:''
     },
     {
         image: '03',
         bigImage: '/assets/images/portfolio/big/dp-big--portfolio-03.jpg',
         category: 'Frontend Developer ',
         title: 'A Better Proffesor App',
-        link:'https://buildweek-better-professor.netlify.app/'
+        link:'https://buildweek-better-professor.netlify.app/',
+        detail: 'React, Redux, Styled Components, JavaScript, CSS, Json Web Token, HTML, RESTful API',
+        code:''
     },
     {
         image: '01',
         bigImage: '/assets/images/portfolio/big/dp-big--portfolio-01.jpg',
         category: 'Web Designer',
         title: 'Essentialisim - Landing Page',
-        link:'https://essentialismlanding.netlify.app/'
+        link:'https://essentialismlanding.netlify.app/',
+        detail: 'HTML5, CSS3, LESS Preprocessor, JavaScript, Responsive Design',
+        code:''
     },
     {
         image: '02',
         bigImage: '/assets/images/portfolio/big/dp-big--portfolio-02.jpg',
         category: 'Front End Developer',
         title: 'Github User search',
-        link:'https://github-user-info-search.netlify.app/'
+        link:'https://github-user-info-search.netlify.app/',
+        detail: 'React, RESTFul API, React Styled Components, JavaScript, CSS, HTML',
+        code:''
     }
 ]
 
@@ -67,7 +74,6 @@ class PortfolioLanding extends Component {
     render () {
         let title = 'A bit about me',
         description = "By leaving collage right after High School for good, I began to design cms based websites for small businesses. Three years laters, I'm a Web Developer with strong knowledge in modern web browser technologies and frameworks. Learn more about me by downloading my CV, checking out my projects, and shooting me a message in the form below. It will go to a which will go to a MySQL Database hosted in the cloud :) ";
-        const PostList = BlogContent.slice(0 , 3);
 
         const { tab1, isOpen } = this.state;
 
@@ -164,6 +170,7 @@ class PortfolioLanding extends Component {
                                             nextSrc={TabOne[(tab1 + 1) % TabOne.length]}
                                             prevSrc={TabOne[(tab1 + TabOne.length - 1) % TabOne.length]}
                                             onCloseRequest={() => this.setState({ isOpen: false })}
+                                            imageCaption={[<h3 style={{color: 'white'}}>{TabOne[tab1].detail}</h3>]}
                                             onMovePrevRequest={() =>
                                             this.setState({
                                                 tab1: (tab1 + TabOne.length - 1) % TabOne.length,
