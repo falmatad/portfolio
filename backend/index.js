@@ -2,7 +2,6 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const mysql = require('mysql2');
-const sslRedirect = require('heroku-ssl-redirect');
 
 const db = mysql.createPool({
     host: "us-cdbr-east-02.cleardb.com",
@@ -23,7 +22,6 @@ app.listen(port, () => {
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
-app.use(sslRedirect())
 
 // form post this url 'api/insert-form'
 // app.post('api/insert-form', (req, res) => {
