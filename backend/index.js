@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const mysql = require('mysql2');
-import sslRedirect from 'heroku-ssl-redirect';
+const sslRedirect = require('heroku-ssl-redirect');
 
 const db = mysql.createPool({
     host: "us-cdbr-east-02.cleardb.com",
