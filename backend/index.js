@@ -23,7 +23,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
-self.app.all(/.*/, function(req, res, next) {
+app.all(/.*/, function(req, res, next) {
     var host = req.header("host");
     if (host.match(/^herokuapp\..*/i)) {
       res.redirect(301, "http://falmata.dev"); 
