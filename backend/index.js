@@ -3,7 +3,7 @@ const app = express();
 const cors = require('cors');
 const mysql = require('mysql2');
 
-const db = mysql.createConnection({
+const db = mysql.createPool({
     host: "us-cdbr-east-02.cleardb.com",
     user: "bd7768d53cf021",
     password: "96d5b738",
