@@ -26,7 +26,7 @@ app.use(express.urlencoded({extended: true}));
 self.app.all(/.*/, function(req, res, next) {
     var host = req.header("host");
     if (host.match(/^herokuapp\..*/i)) {
-      res.redirect(301, "http://" + host + req.url); 
+      res.redirect(301, "http://falmata.dev"); 
     } else {
       next();
     }
