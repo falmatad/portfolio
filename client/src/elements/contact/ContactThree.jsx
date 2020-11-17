@@ -13,7 +13,8 @@ class ContactThree extends Component{
             company: '',
             detailedMessage: '',
             contactDate: moment(new Date().toISOString()).format("YYYY-MM-DD HH:mm:ss"),
-            alert: ''
+            success: "",
+            alert: ""
         };
         this.handelSubmit = this.handelSubmit.bind(this);
     }
@@ -40,12 +41,12 @@ class ContactThree extends Component{
                     detailedMessage: '',
                     contactDate: moment(new Date().toISOString()).format("YYYY-MM-DD HH:mm:ss")
                 })
-                this.setState({alert: "Thanks, your info was sent to me, on a secure Heroku MySQL database :)"})
+                this.setState({success: 'green', alert: "Thanks, your info was sent to me :)"})
             }
-        }).catch(function (error) {
+        }).catch((error) => {
                     if (error) {
                         this.setState({
-                            alert: "The form wasn't sent, please refresh and try again :)"
+                            success: 'red', alert: "Woops :[ The form wasn't sent, please refresh and try again"
                         })
                     }
         });
@@ -127,7 +128,7 @@ class ContactThree extends Component{
                                     </label>
                                     </>
                                     : null}
-                                    <div className="section-title text-left mb--50">{ this.state.alert !== ''? <p style={{color:'green', margin: '5px'}}>{this.state.alert}</p>: null}</div>
+                                    <div className="section-title text-left mb--50">{ this.state.success !== ""? <p style={{color: this.state.success, margin: '5px'}}>{this.state.alert}</p> : null}</div>
                                     { this.state.alert === '' ? <button className="rn-button-style--2 btn-solid" type="submit" value="submit" name="submit" id="mc-embedded-subscribe">Send</button>: null}
                                 </form>
                             </div>

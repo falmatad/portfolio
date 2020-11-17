@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
-import HeaderThree from "../component/header/HeaderThree";
 import ScrollToTop from 'react-scroll-up';
 import { FiChevronUp } from "react-icons/fi";
-import Footer from "../component/footer/FooterTwo";
-
  class error404 extends Component {
     
     render() {
