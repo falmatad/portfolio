@@ -27,7 +27,7 @@ const TabOne = [
     {
         image: '04',
         bigImage: '/assets/images/portfolio/big/dp-big--portfolio-04.jpg',
-        category: 'Frontend Developer',
+        category: 'Mobile Developer',
         title: 'Daryeel Health',
         link:'https://app-dev.daryeelhealth.com/',
         detail: 'React, Redux, SCSS, Express, NodeJs, JavaScript, HTML, CSS, React Native',
@@ -73,7 +73,7 @@ class PortfolioLanding extends Component {
     
     render () {
         let title = 'A bit about me',
-        description = "By leaving collage right after High School for good, I began to design cms based websites for small businesses. Three years laters, I'm a Web Developer with strong knowledge in modern web browser technologies and frameworks. Learn more about me by downloading my CV, checking out my projects, and shooting me a message in the form below. It will go to a MySQL Database hosted in the cloud :) ";
+        description = "My name is Falmata, a Hardworking Software Engineer, Web Developer, and Web Designer that started his Software Development journey by attending a Full Stack Web Development Bootcamp known as Lambda School, leaving with a solid grasp of web development technologies and agile based development methodologies. As a Software Engineer at Zeefasys, I’ve had direct experience using various communication and agile methodology tools, owning a product from start to finish, and being a liaison between clients and the engineering team. Learn more about me by downloading my CV, checking out my projects, and shooting me a message in the form below. It will go to a MySQL Database hosted in the cloud :) ";
 
         const { tab1, isOpen } = this.state;
 
@@ -93,8 +93,8 @@ class PortfolioLanding extends Component {
                                             
                                             <h1 className="title">I’m Falmata Dawano, <br/>
                                             <TextLoop interval={1800}>
-                                                <span> Frontend Developer</span>
-                                                <span> Fullstack Developer</span>
+                                                <span> Software Engineer</span>
+                                                <span> Web Developer</span>
                                                 <span> Web Designer</span>
                                             </TextLoop>{" "}
                                             </h1>
@@ -135,7 +135,7 @@ class PortfolioLanding extends Component {
                                         
                                     </div>
                                     <div style={{marginTop:'20px'}}>
-                                        <a className="rn-btn" href="/assets/pdf/MyResumeFalmataDawano.pdf" download='falmata-dawano-resume'>
+                                        <a className="rn-btn" href="/assets/pdf/MyResumeFalmataD.pdf" download='falmata-dawano-resume'>
                                             <span>Download My CV</span>
                                         </a>
                                     </div>
