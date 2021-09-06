@@ -27,11 +27,20 @@ const TabOne = [
     {
         image: '04',
         bigImage: '/assets/images/portfolio/big/dp-big--portfolio-04.jpg',
-        category: 'Mobile Developer',
+        category: 'FrontEnd Developer',
         title: 'Daryeel Health',
         link:'https://app-dev.daryeelhealth.com/',
-        detail: 'React, Redux, SCSS, Express, NodeJs, JavaScript, HTML, CSS, React Native',
-        code:''
+        detail: 'React, Redux, SCSS, Express, NodeJs, JavaScript, HTML, CSS',
+        code:'https://github.com/falmatad/dh'
+    },
+    {
+        image: '05',
+        bigImage: '/assets/images/portfolio/big/dp-big--portfolio-05.jpg',
+        category: 'Mobile Developer',
+        title: 'Al-Amaan Community Center Mobile App',
+        link:'https://app-dev.daryeelhealth.com/',
+        detail: 'JavaScript, React Native, CSS, AWS Lambda, AWS API Gateway, AWS DynamoDB',
+        code:'Private'
     },
     {
         image: '03',
@@ -40,7 +49,7 @@ const TabOne = [
         title: 'A Better Proffesor App',
         link:'https://buildweek-better-professor.netlify.app/',
         detail: 'React, Redux, Styled Components, JavaScript, CSS, Json Web Token, HTML, RESTful API',
-        code:''
+        code:'https://github.com/Build-Week-Better-Professor/Front-end'
     },
     {
         image: '01',
@@ -49,7 +58,7 @@ const TabOne = [
         title: 'Essentialisim - Landing Page',
         link:'https://essentialismlanding.netlify.app/',
         detail: 'HTML5, CSS3, LESS Preprocessor, JavaScript, Responsive Design',
-        code:''
+        code:'https://github.com/Build-Week-Essentialism-2/Essentialism-UI'
     },
     {
         image: '02',
@@ -58,7 +67,7 @@ const TabOne = [
         title: 'Github User search',
         link:'https://github-user-info-search.netlify.app/',
         detail: 'React, RESTFul API, React Styled Components, JavaScript, CSS, HTML',
-        code:''
+        code:'https://github.com/falmatad/React-Github-User-Card/tree/falmata-dawano'
     }
 ]
 
@@ -181,7 +190,7 @@ class PortfolioLanding extends Component {
                                                     tab1: (tab1 + 1) % TabOne.length,
                                                 })
                                             }
-                                            toolbarButtons={[<a href={`${TabOne[tab1].link}`} style={{marginTop:'7px', marginRight:'5px', textAlign: 'center', padding: '5px', display: 'revert' }} className="rn-button-style--2 btn-solid" id="mc-embedded-subscribe">Visit</a>]}
+                                            toolbarButtons={[<a href={`${TabOne[tab1].link}`} style={{marginTop:'7px', marginRight:'5px', textAlign: 'center', padding: '5px', display: 'revert' }} className="rn-button-style--2 btn-solid" id="mc-embedded-subscribe">Visit</a>, <a href={`${TabOne[tab1].code}`} style={{marginTop:'7px', marginRight:'5px', textAlign: 'center', padding: '5px', display: 'revert' }} className="rn-button-style--2 btn-solid" id="mc-embedded-subscribe">CodeBase</a>]}
                                         />
                                     )}
                                     <div className="item-portfolio-static">
