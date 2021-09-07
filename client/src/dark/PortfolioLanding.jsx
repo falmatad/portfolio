@@ -29,7 +29,7 @@ const TabOne = [
         bigImage: '/assets/images/portfolio/big/dp-big--portfolio-04.jpg',
         category: 'FrontEnd Developer',
         title: 'Daryeel Health',
-        link:'https://app-dev.daryeelhealth.com/',
+        link:'',
         detail: 'React, Redux, SCSS, Express, NodeJs, JavaScript, HTML, CSS',
         code:'https://github.com/falmatad/dh'
     },
@@ -38,9 +38,9 @@ const TabOne = [
         bigImage: '/assets/images/portfolio/big/dp-big--portfolio-05.jpg',
         category: 'Mobile Developer',
         title: 'Al-Amaan Community Center Mobile App',
-        link:'https://app-dev.daryeelhealth.com/',
+        link:'https://appdistribution.firebase.google.com/pub/i/cf7f021388234ca1',
         detail: 'JavaScript, React Native, CSS, AWS Lambda, AWS API Gateway, AWS DynamoDB',
-        code:'Private'
+        code:''
     },
     {
         image: '03',
@@ -190,7 +190,7 @@ class PortfolioLanding extends Component {
                                                     tab1: (tab1 + 1) % TabOne.length,
                                                 })
                                             }
-                                            toolbarButtons={[<a href={`${TabOne[tab1].link}`} style={{marginTop:'7px', marginRight:'5px', textAlign: 'center', padding: '5px', display: 'revert' }} className="rn-button-style--2 btn-solid" id="mc-embedded-subscribe">Visit</a>, <a href={`${TabOne[tab1].code}`} style={{marginTop:'7px', marginRight:'5px', textAlign: 'center', padding: '5px', display: 'revert' }} className="rn-button-style--2 btn-solid" id="mc-embedded-subscribe">CodeBase</a>]}
+                                            toolbarButtons={[<a href={TabOne[tab1].link ? `${TabOne[tab1].link}`:`#`} style={{marginTop:'7px', marginRight:'5px', textAlign: 'center', padding: '5px', display: 'revert' }} className="rn-button-style--2 btn-solid" id="mc-embedded-subscribe">Visit</a>, <a href={TabOne[tab1].code ? `${TabOne[tab1].code}`: `#`} style={{marginTop:'7px', marginRight:'5px', textAlign: 'center', padding: '5px', display: 'revert' }} className="rn-button-style--2 btn-solid" id="mc-embedded-subscribe">CodeBase {TabOne[tab1].code ? `${TabOne[tab1].code}`: `Private`}</a>]}
                                         />
                                     )}
                                     <div className="item-portfolio-static">
