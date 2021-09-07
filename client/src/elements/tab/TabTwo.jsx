@@ -48,7 +48,10 @@ class TabsTwo extends Component{
                                                 </li>
                                             </ul>
                                         </div>
-                                        <GitHubCalendar username="falmatad" />
+                                        
+                                        <div style={{marginRight: 10}} className="fix active-light">
+                                            <GitHubCalendar username="falmatad" />
+                                        </div>
                                         
                                     </TabPanel>
 
