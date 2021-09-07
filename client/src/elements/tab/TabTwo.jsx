@@ -48,7 +48,7 @@ class TabsTwo extends Component{
                                                 </li>
                                             </ul>
                                         </div>
-                                        <GitHubCalendar username="falmatad" loading={true}/>
+                                        <GitHubCalendar username="falmatad" />
                                         
                                     </TabPanel>
 
