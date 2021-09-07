@@ -190,7 +190,7 @@ class PortfolioLanding extends Component {
                                                     tab1: (tab1 + 1) % TabOne.length,
                                                 })
                                             }
-                                            toolbarButtons={[<a href={TabOne[tab1].link ? `${TabOne[tab1].link}`:`#`} style={{marginTop:'7px', marginRight:'5px', textAlign: 'center', padding: '5px', display: 'revert' }} className="rn-button-style--2 btn-solid" id="mc-embedded-subscribe">Visit</a>, <a href={TabOne[tab1].code ? `${TabOne[tab1].code}`: `#`} style={{marginTop:'7px', marginRight:'5px', textAlign: 'center', padding: '5px', display: 'revert' }} className="rn-button-style--2 btn-solid" id="mc-embedded-subscribe">CodeBase {TabOne[tab1].code ? `${TabOne[tab1].code}`: `Private`}</a>]}
+                                            toolbarButtons={[<a href={TabOne[tab1].link ? `${TabOne[tab1].link}`:`#`} style={{marginTop:'7px', marginRight:'5px', textAlign: 'center', padding: '5px', display: 'revert' }} className="rn-button-style--2 btn-solid" id="mc-embedded-subscribe">Visit</a>, <a href={TabOne[tab1].code ? `${TabOne[tab1].code}`: `#`} style={{marginTop:'7px', marginRight:'5px', textAlign: 'center', padding: '5px', display: 'revert' }} className="rn-button-style--2 btn-solid" id="mc-embedded-subscribe">{TabOne[tab1].code ? null:`Private`} CodeBase</a>]}
                                         />
                                     )}
                                     <div className="item-portfolio-static">
