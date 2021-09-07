@@ -145,9 +145,9 @@ class PortfolioLanding extends Component {
                                         
                                     </div>
                                     <div 
-                                        style={{color: 'gray', marginTop:'20px'}}
+                                        style={{color: '#c6c9d8bf', marginTop:'20px'}}
                                     >
-                                        <a href="https://github.com/falmatad">
+                                        <a style={{color: '#c6c9d8bf'}} href="https://github.com/falmatad">
                                             My GitHub Contribution Chart. Click to learn more.
                                             <GitHubCalendar username="falmatad" />
                                         </a>
