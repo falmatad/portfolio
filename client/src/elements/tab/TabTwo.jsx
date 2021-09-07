@@ -27,17 +27,17 @@ class TabsTwo extends Component{
                                             <ul>
                                                 <li>
                                                     <a href="/service">User Interface Development</a>
-                                                    Build reusable User Interfaces that scale with the overall application using tech-stack such as Vanilla JavaScript, React, Redux, Responsive Styled Components, and more
+                                                    Build reusable User Interfaces that scale with the overall application using tech-stack such as Vanilla JavaScript, React, React Native, Responsive Styled Components, and more
                                                 </li>
 
                                                 <li>
-                                                    <a href="/service"> NodeJs Backend With ExpressJs</a>
-                                                    Expose Nodejs APIs using ExpressJs with proper async response and error handling 
+                                                    <a href="/service"> AWS Cloud</a>
+                                                    Build, Deploy, and manage Websites and Serverless Backends on AWS 
                                                 </li>
 
                                                 <li>
                                                     <a href="/service"> Responsive Web Design</a>
-                                                    Build responsive sites that delight each mouse click and hover. I use vanilla CSS, CSS within JavaScript, and CSS Preprocessors like Less
+                                                    Build responsive sites that delight each mouse click and hover using vanilla CSS, CSS within JavaScript, and CSS Preprocessors like Less
                                                 </li>
 
                                                 <li>
