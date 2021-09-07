@@ -8,6 +8,7 @@ import ContactThree from "../elements/contact/ContactThree";
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 import {FaLinkedinIn } from "react-icons/fa";
+import GitHubCalendar from 'react-github-calendar'
 const SocialShare = [
     {Social: <FaLinkedinIn /> , link: 'https://www.linkedin.com/in/'}
 ]
@@ -27,10 +28,19 @@ const TabOne = [
     {
         image: '04',
         bigImage: '/assets/images/portfolio/big/dp-big--portfolio-04.jpg',
-        category: 'Frontend Developer',
+        category: 'FrontEnd Developer',
         title: 'Daryeel Health',
-        link:'https://app-dev.daryeelhealth.com/',
-        detail: 'React, Redux, SCSS, Express, NodeJs, JavaScript, HTML, CSS, React Native',
+        link:'',
+        detail: 'React, Redux, SCSS, Express, NodeJs, JavaScript, HTML, CSS',
+        code:'https://github.com/falmatad/dh'
+    },
+    {
+        image: '05',
+        bigImage: '/assets/images/portfolio/big/dp-big--portfolio-05.jpg',
+        category: 'Mobile Developer',
+        title: 'Al-Amaan Community Center Mobile App',
+        link:'https://appdistribution.firebase.google.com/pub/i/cf7f021388234ca1',
+        detail: 'JavaScript, React Native, CSS, AWS Lambda, AWS API Gateway, AWS DynamoDB',
         code:''
     },
     {
@@ -40,7 +50,7 @@ const TabOne = [
         title: 'A Better Proffesor App',
         link:'https://buildweek-better-professor.netlify.app/',
         detail: 'React, Redux, Styled Components, JavaScript, CSS, Json Web Token, HTML, RESTful API',
-        code:''
+        code:'https://github.com/Build-Week-Better-Professor/Front-end'
     },
     {
         image: '01',
@@ -49,7 +59,7 @@ const TabOne = [
         title: 'Essentialisim - Landing Page',
         link:'https://essentialismlanding.netlify.app/',
         detail: 'HTML5, CSS3, LESS Preprocessor, JavaScript, Responsive Design',
-        code:''
+        code:'https://github.com/Build-Week-Essentialism-2/Essentialism-UI'
     },
     {
         image: '02',
@@ -58,7 +68,7 @@ const TabOne = [
         title: 'Github User search',
         link:'https://github-user-info-search.netlify.app/',
         detail: 'React, RESTFul API, React Styled Components, JavaScript, CSS, HTML',
-        code:''
+        code:'https://github.com/falmatad/React-Github-User-Card/tree/falmata-dawano'
     }
 ]
 
@@ -73,7 +83,7 @@ class PortfolioLanding extends Component {
     
     render () {
         let title = 'A bit about me',
-        description = "By leaving collage right after High School for good, I began to design cms based websites for small businesses. Three years laters, I'm a Web Developer with strong knowledge in modern web browser technologies and frameworks. Learn more about me by downloading my CV, checking out my projects, and shooting me a message in the form below. It will go to a MySQL Database hosted in the cloud :) ";
+        description = "Software Engineer, Web Developer, and Web Designer with a solid grasp of web development technologies and agile based development methodologies. As a Software Engineer at Zeefasys, I’ve had direct experience using various agile methodology tools, owning a product from start to finish, and being a liaison between clients and the engineering team. I am currently looking to join engineering teams that are solving unique problems, value learning and sharing knowledge. Learn more about me by downloading my CV, checking out my projects, and shooting me a message in the form below. It will go to a MySQL Database hosted in the cloud :) ";
 
         const { tab1, isOpen } = this.state;
 
@@ -93,8 +103,8 @@ class PortfolioLanding extends Component {
                                             
                                             <h1 className="title">I’m Falmata Dawano, <br/>
                                             <TextLoop interval={1800}>
-                                                <span> Frontend Developer</span>
-                                                <span> Fullstack Developer</span>
+                                                <span> Software Engineer</span>
+                                                <span> Web Developer</span>
                                                 <span> Web Designer</span>
                                             </TextLoop>{" "}
                                             </h1>
@@ -134,8 +144,16 @@ class PortfolioLanding extends Component {
                                         </div>
                                         
                                     </div>
+                                    <div 
+                                        style={{color: '#c6c9d8bf', marginTop:'20px'}}
+                                    >
+                                        <a style={{color: '#c6c9d8bf'}} href="https://github.com/falmatad">
+                                            My GitHub Contribution Chart. Click to learn more.
+                                            <GitHubCalendar username="falmatad" />
+                                        </a>
+                                    </div>
                                     <div style={{marginTop:'20px'}}>
-                                        <a className="rn-btn" href="/assets/pdf/MyResumeFalmataDawano.pdf" download='falmata-dawano-resume'>
+                                        <a className="rn-btn" href="/assets/pdf/MyResumeFalmataD.pdf" download='falmata-dawano-resume'>
                                             <span>Download My CV</span>
                                         </a>
                                     </div>
@@ -181,7 +199,7 @@ class PortfolioLanding extends Component {
                                                     tab1: (tab1 + 1) % TabOne.length,
                                                 })
                                             }
-                                            toolbarButtons={[<a href={`${TabOne[tab1].link}`} style={{marginTop:'7px', marginRight:'5px', textAlign: 'center', padding: '5px', display: 'revert' }} className="rn-button-style--2 btn-solid" id="mc-embedded-subscribe">Visit</a>]}
+                                            toolbarButtons={[<a href={TabOne[tab1].link ? `${TabOne[tab1].link}`:`#`} style={{marginTop:'7px', marginRight:'5px', textAlign: 'center', padding: '5px', display: 'revert' }} className="rn-button-style--2 btn-solid" id="mc-embedded-subscribe">Visit</a>, <a href={TabOne[tab1].code ? `${TabOne[tab1].code}`: `#`} style={{marginTop:'7px', marginRight:'5px', textAlign: 'center', padding: '5px', display: 'revert' }} className="rn-button-style--2 btn-solid" id="mc-embedded-subscribe">{TabOne[tab1].code ? null:`Private`} CodeBase</a>]}
                                         />
                                     )}
                                     <div className="item-portfolio-static">
