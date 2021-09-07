@@ -8,6 +8,7 @@ import ContactThree from "../elements/contact/ContactThree";
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 import {FaLinkedinIn } from "react-icons/fa";
+import GitHubCalendar from 'react-github-calendar'
 const SocialShare = [
     {Social: <FaLinkedinIn /> , link: 'https://www.linkedin.com/in/'}
 ]
@@ -142,6 +143,14 @@ class PortfolioLanding extends Component {
                                             <TabTwo tabStyle="tab-style--1" />
                                         </div>
                                         
+                                    </div>
+                                    <div 
+                                        style={{color: 'gray', marginTop:'20px'}}
+                                    >
+                                        <a href="https://github.com/falmatad">
+                                            My GitHub Contribution Chart. Click to learn more.
+                                            <GitHubCalendar username="falmatad" />
+                                        </a>
                                     </div>
                                     <div style={{marginTop:'20px'}}>
                                         <a className="rn-btn" href="/assets/pdf/MyResumeFalmataD.pdf" download='falmata-dawano-resume'>

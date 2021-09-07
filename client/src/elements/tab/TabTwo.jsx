@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import GitHubCalendar from 'react-github-calendar'
-import ReactTooltip from 'react-github-calendar'
 
 class TabsTwo extends Component{
     render(){
@@ -47,10 +45,6 @@ class TabsTwo extends Component{
                                                     Build and Host MySQL database on the Cloud
                                                 </li>
                                             </ul>
-                                        </div>
-                                        
-                                        <div style={{marginRight: 10}} className="fix active-light">
-                                            <GitHubCalendar username="falmatad" />
                                         </div>
                                         
                                     </TabPanel>
