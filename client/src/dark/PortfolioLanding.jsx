@@ -83,7 +83,7 @@ class PortfolioLanding extends Component {
     
     render () {
         let title = 'A bit about me',
-        description = "My name is Falmata, a Hardworking Software Engineer, Web Developer, and Web Designer that started his Software Development journey by attending a Full Stack Web Development Bootcamp known as Lambda School, leaving with a solid grasp of web development technologies and agile based development methodologies. As a Software Engineer at Zeefasys, I’ve had direct experience using various communication and agile methodology tools, owning a product from start to finish, and being a liaison between clients and the engineering team. Learn more about me by downloading my CV, checking out my projects, and shooting me a message in the form below. It will go to a MySQL Database hosted in the cloud :) ";
+        description = "Software Engineer, Web Developer, and Web Designer with a solid grasp of web development technologies and agile based development methodologies. As a Software Engineer at Zeefasys, I’ve had direct experience using various agile methodology tools, owning a product from start to finish, and being a liaison between clients and the engineering team. I am currently looking to join engineering teams that are solving unique problems, value learning and sharing knowledge. Learn more about me by downloading my CV, checking out my projects, and shooting me a message in the form below. It will go to a MySQL Database hosted in the cloud :) ";
 
         const { tab1, isOpen } = this.state;
 
