@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import GitHubCalendar from 'react-github-calendar'
+import ReactTooltip from 'react-github-calendar'
 
 class TabsTwo extends Component{
     render(){
@@ -46,7 +48,10 @@ class TabsTwo extends Component{
                                                 </li>
                                             </ul>
                                         </div>
-                                        <codersrank-widget style={{"--header-bg-color": "rgb(152 154 165)"}} username="falmatad"></codersrank-widget>
+                                        <GitHubCalendar username="falmatad" loading={true}>
+                                            <ReactTooltip html />
+                                        </GitHubCalendar>
+                                        
                                     </TabPanel>
 
                                     <TabPanel>
