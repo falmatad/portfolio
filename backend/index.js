@@ -23,14 +23,14 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
-app.all(/.*/, function(req, res, next) {
-    var host = req.header("host");
-    if (host.match(/^herokuapp\..*/i)) {
-      res.redirect(301, "http://falmata.dev"); 
-    } else {
-      next();
-    }
-  }); 
+// app.all(/.*/, function(req, res, next) {
+//     var host = req.header("host");
+//     if (host.match(/^herokuapp\..*/i)) {
+//       res.redirect(301, "http://falmata.dev"); 
+//     } else {
+//       next();
+//     }
+//   }); 
 
 // form post this url 'api/insert-form'
 // app.post('api/insert-form', (req, res) => {
