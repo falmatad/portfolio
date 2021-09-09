@@ -153,7 +153,7 @@ class PortfolioLanding extends Component {
                                         </a>
                                     </div>
                                     <div style={{marginTop:'20px'}}>
-                                        <a className="rn-btn" href="/assets/pdf/MyResumeFalmata.pdf" download='falmata-dawano-resume'>
+                                        <a className="rn-btn" href="/assets/pdf/MyResumeFalmataDawano.pdf" download='falmata-dawano-resume'>
                                             <span>Download My CV</span>
                                         </a>
                                     </div>
