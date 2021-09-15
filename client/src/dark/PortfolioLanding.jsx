@@ -39,17 +39,26 @@ const TabOne = [
         bigImage: '/assets/images/portfolio/big/dp-big--portfolio-05.jpg',
         category: 'Mobile Developer',
         title: 'Al-Amaan Community Center Mobile App',
-        link:'https://appdistribution.firebase.google.com/pub/i/cf7f021388234ca1',
+        link: {ios: 'https://appdistribution.firebase.dev/i/b56c0d5b373d0ff8', android: 'https://appdistribution.firebase.google.com/pub/i/cf7f021388234ca1'},
         detail: 'JavaScript, React Native, CSS, AWS Lambda, AWS API Gateway, AWS DynamoDB',
+        code:''
+    },
+    {
+        image: '06',
+        bigImage: '/assets/images/portfolio/big/dp-big--portfolio-06.jpg',
+        category: 'FrontEnd Developer',
+        title: 'The Noble Koran Web App',
+        link:'https://appdistribution.firebase.google.com/pub/i/cf7f021388234ca1',
+        detail: 'React, REST API, React Styled Components, JavaScript, CSS, HTML',
         code:''
     },
     {
         image: '03',
         bigImage: '/assets/images/portfolio/big/dp-big--portfolio-03.jpg',
-        category: 'Frontend Developer ',
+        category: 'Frontend Developer',
         title: 'A Better Proffesor App',
         link:'https://buildweek-better-professor.netlify.app/',
-        detail: 'React, Redux, Styled Components, JavaScript, CSS, Json Web Token, HTML, RESTful API',
+        detail: 'React, Redux, Styled Components, JavaScript, CSS, Json Web Token, HTML, REST API',
         code:'https://github.com/Build-Week-Better-Professor/Front-end'
     },
     {
@@ -67,7 +76,7 @@ const TabOne = [
         category: 'Front End Developer',
         title: 'Github User search',
         link:'https://github-user-info-search.netlify.app/',
-        detail: 'React, RESTFul API, React Styled Components, JavaScript, CSS, HTML',
+        detail: 'React, REST API, React Styled Components, JavaScript, CSS, HTML',
         code:'https://github.com/falmatad/React-Github-User-Card/tree/falmata-dawano'
     }
 ]
@@ -199,7 +208,7 @@ class PortfolioLanding extends Component {
                                                     tab1: (tab1 + 1) % TabOne.length,
                                                 })
                                             }
-                                            toolbarButtons={[<a href={TabOne[tab1].link ? `${TabOne[tab1].link}`:`#`} style={{marginTop:'7px', marginRight:'5px', textAlign: 'center', padding: '5px', display: 'revert' }} className="rn-button-style--2 btn-solid" id="mc-embedded-subscribe">Visit</a>, <a href={TabOne[tab1].code ? `${TabOne[tab1].code}`: `#`} style={{marginTop:'7px', marginRight:'5px', textAlign: 'center', padding: '5px', display: 'revert' }} className="rn-button-style--2 btn-solid" id="mc-embedded-subscribe">{TabOne[tab1].code ? null:`Private`} CodeBase</a>]}
+                                            toolbarButtons={TabOne[tab1].link.ios? [<a href={TabOne[tab1].link.ios ? `${TabOne[tab1].link.ios}`:`#`} style={{marginTop:'7px', marginRight:'5px', textAlign: 'center', padding: '5px', display: 'revert' }} className="rn-button-style--2 btn-solid" id="mc-embedded-subscribe">iOS</a>, <a href={TabOne[tab1].link.android ? `${TabOne[tab1].link.android}`:`#`} style={{marginTop:'7px', marginRight:'5px', textAlign: 'center', padding: '5px', display: 'revert' }} className="rn-button-style--2 btn-solid" id="mc-embedded-subscribe">Android</a> ,<a href={TabOne[tab1].code ? `${TabOne[tab1].code}`: `#`} style={{marginTop:'7px', marginRight:'5px', textAlign: 'center', padding: '5px', display: 'revert' }} className="rn-button-style--2 btn-solid" id="mc-embedded-subscribe">{TabOne[tab1].code ? null:`Private`} CodeBase</a>]:[<a href={TabOne[tab1].link ? `${TabOne[tab1].link}`:`#`} style={{marginTop:'7px', marginRight:'5px', textAlign: 'center', padding: '5px', display: 'revert' }} className="rn-button-style--2 btn-solid" id="mc-embedded-subscribe">Visit</a>, <a href={TabOne[tab1].code ? `${TabOne[tab1].code}`: `#`} style={{marginTop:'7px', marginRight:'5px', textAlign: 'center', padding: '5px', display: 'revert' }} className="rn-button-style--2 btn-solid" id="mc-embedded-subscribe">{TabOne[tab1].code ? null:`Private`} CodeBase</a>]}
                                         />
                                     )}
                                     <div className="item-portfolio-static">
