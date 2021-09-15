@@ -48,9 +48,9 @@ const TabOne = [
         bigImage: '/assets/images/portfolio/big/dp-big--portfolio-06.jpg',
         category: 'FrontEnd Developer',
         title: 'The Noble Koran Web App',
-        link:'https://appdistribution.firebase.google.com/pub/i/cf7f021388234ca1',
+        link:'https://my-quran-app.vercel.app/',
         detail: 'React, REST API, React Styled Components, JavaScript, CSS, HTML',
-        code:''
+        code:'https://github.com/falmatad/my-quran-app'
     },
     {
         image: '03',
