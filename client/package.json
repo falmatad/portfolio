@@ -1,8 +1,7 @@
 {
-  "name": "trydo",
+  "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://trydo.rainbowit.net",
   "basename": "/",
   "dependencies": {
     "@babel/core": "7.4.3",
