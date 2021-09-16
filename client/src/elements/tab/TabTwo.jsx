@@ -27,7 +27,7 @@ class TabsTwo extends Component{
                                             <ul>
                                                 <li>
                                                     <a href="/service">User Interface Development</a>
-                                                    Build reusable User Interfaces that scale with the overall application using tech-stack such as Vanilla JavaScript, React, React Native, Responsive Styled Components, and more
+                                                    Build reusable User Interfaces that scale with the overall application using tech-stack such as Vanilla JavaScript, React, React Native, and Responsive Styled Components
                                                 </li>
 
                                                 <li>
