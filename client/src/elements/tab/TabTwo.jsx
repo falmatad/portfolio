@@ -26,13 +26,23 @@ class TabsTwo extends Component{
                                         <div className="single-tab-content">
                                             <ul>
                                                 <li>
-                                                    <a href="/service">User Interface Development</a>
-                                                    Build reusable User Interfaces that scale with the overall application using tech-stack such as Vanilla JavaScript, React, React Native, Responsive Styled Components, and more
+                                                    <a href="/service"> Frontend Development</a>
+                                                    Reusable User Interfaces that scale with the overall application using tech-stack such as Vanilla JavaScript, React, Styled Components, ect..
                                                 </li>
 
                                                 <li>
-                                                    <a href="/service"> AWS Cloud</a>
+                                                    <a href="/service"> Backend Development</a>
+                                                    Fullstack applications using NodeJs, Sequalize, and SQL and NoSQL Databases
+                                                </li>
+
+                                                <li>
+                                                    <a href="/service"> Cloud</a>
                                                     Build, Deploy, and manage Websites and Serverless Backends on AWS 
+                                                </li>
+
+                                                <li>
+                                                    <a href="/service"> Mobile App</a>
+                                                    Build Fullstack cross platform mobile applications using React Native.
                                                 </li>
 
                                                 <li>
@@ -40,10 +50,7 @@ class TabsTwo extends Component{
                                                     Build responsive sites that delight each mouse click and hover using vanilla CSS, CSS within JavaScript, and CSS Preprocessors like Less
                                                 </li>
 
-                                                <li>
-                                                    <a href="/service"> MySQL Relational Database</a>
-                                                    Build and Host MySQL database on the Cloud
-                                                </li>
+                                                
                                             </ul>
                                         </div>
                                         
@@ -53,13 +60,13 @@ class TabsTwo extends Component{
                                        <div className="single-tab-content">
                                            <ul>
                                                <li>
-                                                   <a href="/service"> Software Engineer <span> - Zefa Consulting Inc</span></a> 03/2020 - Current
+                                                   <a href="/service"> Fullstack Developer <span> - INTENT (intent.ag)</span></a> Oct 2021 – Present 
                                                </li>
                                                <li>
-                                                   <a href="/service"> Self Employed Coding Instructor <span> EveryoneShouldCode LLC</span></a> 06/2019 - Current
+                                                   <a href="/service"> Software Engineer <span> - Zefa Consulting (zeefasys.com)</span></a> Apr 2020 – Nov 2021
                                                </li>
                                                <li>
-                                                   <a href="/service"> Public School Coding Instructor <span> - Youth Enrichment League</span></a> 10/2018 - Current
+                                                   <a href="/service"> Coding Teacher <span> - Youth Enrichment League</span></a> Oct 2018 – May 2019
                                                </li>
                                            </ul>
                                        </div>
@@ -69,7 +76,7 @@ class TabsTwo extends Component{
                                        <div className="single-tab-content">
                                            <ul>
                                                <li>
-                                                   <a href="/service">Web Development<span> - Lambda School, Remote Agile Learning</span></a> 09/2019 - 01/2020
+                                                   <a href="/service">Web Development<span> - Bloomtech Institute </span></a> Sep 2019 - Jan 2020
                                                </li>
                                            </ul>
                                        </div>

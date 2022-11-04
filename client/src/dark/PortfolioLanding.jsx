@@ -92,7 +92,7 @@ class PortfolioLanding extends Component {
     
     render () {
         let title = 'A bit about me',
-        description = "Software Engineer, Web Developer, and Web Designer with a solid grasp of web development technologies and agile based development methodologies. As a Software Engineer at Zeefasys, I’ve had direct experience using various agile methodology tools, owning a product from start to finish, and being a liaison between clients and the engineering team. I am currently looking to join engineering teams that are solving unique problems, value learning and sharing knowledge. Learn more about me by downloading my CV, checking out my projects, and shooting me a message in the form below. It will go to a MySQL Database hosted in the cloud :) ";
+        description = "I'm a Software Engineer, Fullstack Developer, and a Web Designer looking to succeed wherever I may be. I’ve had direct experience using agile methodology tools, owning a product from start to finish, and being a liaison between clients and the engineering team. I value solving unique problems, learning, and sharing knowledge. Connect with me";
 
         const { tab1, isOpen } = this.state;
 
@@ -110,11 +110,11 @@ class PortfolioLanding extends Component {
                                     <div className="col-lg-12">
                                         <div className={`inner ${value.textPosition}`}>
                                             
-                                            <h1 className="title">I’m Falmata Dawano, <br/>
+                                            <h1 className="title">I’m Falmata Dawano, I<br/>
                                             <TextLoop interval={1800}>
-                                                <span> Software Engineer</span>
-                                                <span> Web Developer</span>
-                                                <span> Web Designer</span>
+                                                <span> Engineer</span>
+                                                <span> Develop</span>
+                                                <span> Design</span>
                                             </TextLoop>{" "}
                                             </h1>
                                             
@@ -153,14 +153,14 @@ class PortfolioLanding extends Component {
                                         </div>
                                         
                                     </div>
-                                    <div 
+                                    {/* <div 
                                         style={{color: '#c6c9d8bf', marginTop:'20px'}}
                                     >
                                         <a style={{color: '#c6c9d8bf'}} target="_blank" rel="noopener noreferrer"href="https://github.com/falmatad">
                                             My GitHub Contribution Chart. Click to learn more.
                                             <GitHubCalendar username="falmatad" />
                                         </a>
-                                    </div>
+                                    </div> */}
                                     <div style={{marginTop:'20px'}}>
                                         <a className="rn-btn" href="/assets/pdf/MyResumeFalmataDawano.pdf" download='falmata-dawano-resume'>
                                             <span>Download My CV</span>
